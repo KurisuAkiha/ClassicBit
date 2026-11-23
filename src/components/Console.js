@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import GameIcon from './GameIcon';
+import SnakeGame from './SnakeGame';
 import { getRecord } from '../lib/records';
 
 // Flecha en SVG (así se ve igual en todos los dispositivos, sin emojis)
@@ -43,12 +44,19 @@ export default function Console({ game }) {
             </div>
 
             {/* AQUÍ se montará el juego (canvas o componente) */}
-            <div className="stage" id="stage">
-              <GameIcon slug={game.slug} />
-              <div className="blink soon">PRÓXIMAMENTE</div>
-              <div>Aquí irá el juego</div>
-            </div>
-          </div>
+
+     <div className="stage" id="stage">
+  {game.slug === 'culebrita' ? (
+    <SnakeGame />
+  ) : (
+    <>
+      <GameIcon slug={game.slug} />
+      <div className="blink soon">PRÓXIMAMENTE</div>
+      <div>Aquí irá el juego</div>
+    </>
+  )}
+</div>
+</div>
 
           <div className="left">
             <div className="dpad" aria-label="Controles">

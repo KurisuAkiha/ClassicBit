@@ -129,3 +129,80 @@ footer{text-align:center; padding:32px 20px; color:var(--muted); font-size:9px}
 
 /* Evita que los símbolos se dibujen como emoji */
 .key,.mini,.btn{font-variant-emoji:text}
+
+
+/* diseño de la culebrita */
+/* =========================
+   JUEGO: CULEBRITA
+========================= */
+
+.snake-game {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  color: var(--green);
+  font-family: inherit;
+}
+
+.snake-info {
+  width: min(100%, 420px);
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.snake-board {
+  width: min(100%, 420px);
+  aspect-ratio: 1 / 1;
+  display: grid;
+  gap: 2px;
+  padding: 5px;
+  background: #101510;
+  border: 2px solid var(--green);
+  box-shadow: 0 0 12px rgba(71, 255, 154, 0.15);
+}
+
+.snake-cell {
+  min-width: 0;
+  min-height: 0;
+  background: #1b241d;
+  border-radius: 2px;
+}
+
+.snake-body {
+  background: #47ff9a;
+  box-shadow: 0 0 5px rgba(71, 255, 154, 0.5);
+}
+
+.snake-head {
+  background: #d5ffe5;
+  border: 2px solid #47ff9a;
+}
+
+.snake-food {
+  background: #ff4b5c;
+  border-radius: 50%;
+  box-shadow: 0 0 7px rgba(255, 75, 92, 0.6);
+}
+
+.snake-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.snake-message button {
+  padding: 9px 20px;
+  color: #101510;
+  background: var(--green);
+  border: none;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+}
