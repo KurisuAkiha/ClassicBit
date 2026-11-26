@@ -9,7 +9,7 @@ export const games = [
     jugadores: '1–2 JUGADORES',
     etiquetaRecord: 'VICTORIAS',
     controles: 'touch',
-    ayuda: 'Toca una casilla (o haz clic con el mouse) para poner tu marca. Alinea tres para ganar.',
+    ayuda: 'Elige un modo y toca una casilla (o usa las flechas y Enter) para poner tu marca. Alinea tres para ganar. M regresa al menú.',
   },
   {
     slug: 'culebrita',

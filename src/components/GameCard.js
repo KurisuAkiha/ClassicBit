@@ -2,11 +2,11 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import GameIcon from './GameIcon';
-import { getRecord } from '../lib/records';
+import { getResumen } from '../lib/resumen';
 
 export default function GameCard({ game }) {
   const [record, setRecord] = useState(0);
-  useEffect(() => setRecord(getRecord(game.slug)), [game.slug]);
+  useEffect(() => setRecord(getResumen(game.slug)), [game.slug]);
 
   return (
     <article className="card" style={{ '--c': game.color }}>
